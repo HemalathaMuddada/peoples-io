@@ -1,0 +1,70 @@
+project_id = "ottnjhquuwjccppyqwif"
+
+[functions.analyze-resume]
+verify_jwt = true
+
+[functions.career-coach]
+verify_jwt = true
+
+[functions.extract-resume-text]
+verify_jwt = true
+
+[functions.validate-resume-upload]
+verify_jwt = true
+
+[functions.enhance-resume]
+verify_jwt = true
+
+[functions.linkedin-oauth]
+verify_jwt = false
+
+[functions.fetch-luma-events]
+verify_jwt = true
+
+[functions.scrape-luma-events]
+verify_jwt = true
+
+[functions.scrape-company-news]
+verify_jwt = false
+
+[functions.bulk-apply-to-matches]
+verify_jwt = true
+
+[functions.predict-resume-performance]
+verify_jwt = true
+
+[functions.generate-career-recommendations]
+verify_jwt = true
+
+[functions.generate-learning-path]
+verify_jwt = true
+
+[functions.generate-learning-recommendations]
+verify_jwt = true
+
+[functions.optimize-linkedin-profile]
+verify_jwt = true
+
+[functions.extension-api-create-application]
+verify_jwt = true
+
+[functions.extension-api-get-applications]
+verify_jwt = true
+
+[functions.extension-api-update-application]
+verify_jwt = true
+
+[functions.generate-follow-up-suggestions]
+verify_jwt = true
+
+[functions.generate-follow-up-email]
+verify_jwt = true
+
+[functions.send-email]
+verify_jwt = false
+
+[functions.process-scheduled-notifications]
+verify_jwt = false
+
+[functions.send-weekly-analytics-report]
+verify_jwt = false

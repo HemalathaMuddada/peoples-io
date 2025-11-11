@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Professional outplacement platform colors */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Trust & Professional - Deep Blue */
+    --primary: 215 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 215 85% 40%;
+    
+    /* Growth & Success - Vibrant Green */
+    --secondary: 155 65% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 155 65% 40%;
+
+    /* Soft Neutrals */
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 215 85% 95%;
+    --accent-foreground: 215 85% 45%;
+
+    /* Alerts */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --warning: 35 95% 55%;
+    --warning-foreground: 0 0% 100%;
+    
+    --success: 155 65% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 215 85% 45%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215, 85%, 45%), hsl(215, 85%, 60%));
+    --gradient-success: linear-gradient(135deg, hsl(155, 65%, 45%), hsl(155, 65%, 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210, 20%, 98%), hsl(215, 20%, 95%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(215 25% 15% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1);
+    --shadow-card: 0 2px 8px 0 hsl(215 25% 15% / 0.08);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 15%;
+    --sidebar-primary: 215 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 85% 95%;
+    --sidebar-accent-foreground: 215 85% 45%;
+    --sidebar-border: 215 20% 88%;
+    --sidebar-ring: 215 85% 45%;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 215 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 215 85% 60%;
+
+    --secondary: 155 65% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 155 65% 55%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 215 25% 18%;
+    --accent-foreground: 215 85% 55%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --warning: 35 95% 60%;
+    --warning-foreground: 0 0% 100%;
+    
+    --success: 155 65% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 215 85% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(215, 85%, 55%), hsl(215, 85%, 70%));
+    --gradient-success: linear-gradient(135deg, hsl(155, 65%, 50%), hsl(155, 65%, 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215, 30%, 8%), hsl(215, 25%, 12%));
+
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 8px 0 hsl(0 0% 0% / 0.25);
+
+    --sidebar-background: 215 25% 12%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 215 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 215 85% 55%;
+    --sidebar-border: 215 25% 18%;
+    --sidebar-ring: 215 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
