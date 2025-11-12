@@ -65,7 +65,13 @@ export const CareerPlanner = () => {
     );
   }
 
-  if (!data) return null;
+  if (!data) {
+    return (
+      <div className="space-y-6">
+        <GoogleCalendar />
+      </div>
+    );
+  }
 
   const activeGoals = data.goals.filter(g => g.status === "in_progress");
   const completedGoals = data.goals.filter(g => g.status === "completed");
@@ -110,6 +116,8 @@ export const CareerPlanner = () => {
 
   return (
     <div className="space-y-6">
+      <GoogleCalendar />
+
       {/* Career Progress Overview */}
       <Card className="shadow-card border-primary/20">
         <CardHeader>
@@ -320,8 +328,6 @@ export const CareerPlanner = () => {
           )}
         </CardContent>
       </Card>
-
-      <GoogleCalendar />
     </div>
   );
 };
