@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Loader2, TrendingUp, Target, GraduationCap, Briefcase, DollarSign, Calendar } from "lucide-react";
+import { GoogleCalendar } from "@/components/career/GoogleCalendar";
 
 interface CareerData {
   profile: any;
@@ -319,6 +320,8 @@ export const CareerPlanner = () => {
           )}
         </CardContent>
       </Card>
+
+      <GoogleCalendar />
     </div>
   );
 };
