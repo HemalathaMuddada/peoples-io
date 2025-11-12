@@ -1,7 +1,7 @@
 // src/hooks/useGoogleAuth.ts
 import { useState, useEffect } from 'react';
 
-const CLIENT_ID = '965516682930-6dk48fgomnnd9k9jvd0j0pu65mhe3uoj.apps.googleusercontent.com';
+const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar.events';
 
 declare const google: any;

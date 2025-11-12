@@ -1,31 +1,9 @@
 // src/utils/googleCalendar.ts
 
-const CLIENT_ID = '965516682930-6dk48fgomnnd9k9jvd0j0pu65mhe3uoj.apps.googleusercontent.com';
-const REDIRECT_URI = 'http://localhost:3000';
+const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+const REDIRECT_URI = import.meta.env.VITE_GOOGLE_REDIRECT_URI;
 const SCOPES = 'https://www.googleapis.com/auth/calendar';
 
-let tokenClient: any;
-
-export const getGoogleAuthToken = (): Promise<any> => {
-    return new Promise((resolve, reject) => {
-      try {
-        tokenClient = google.accounts.oauth2.initTokenClient({
-          client_id: CLIENT_ID,
-          scope: SCOPES,
-          callback: (tokenResponse: any) => {
-            if (tokenResponse && tokenResponse.access_token) {
-              resolve(tokenResponse);
-            } else {
-              reject(new Error('Failed to retrieve access token.'));
-            }
-          },
-        });
-        tokenClient.requestAccessToken();
-      } catch (error) {
-        reject(error);
-      }
-    });
-  };
 
 export const getFreeBusy = async (accessToken: string, timeMin: string, timeMax: string, calendarId: string = 'primary') => {
   const response = await fetch(`https://www.googleapis.com/calendar/v3/freeBusy`, {
