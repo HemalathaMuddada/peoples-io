@@ -12,6 +12,7 @@ import Jobs from "./pages/Jobs";
 import Applications from "./pages/Applications";
 import Profile from "./pages/Profile";
 import Resumes from "./pages/Resumes";
+import FindJobs from "./pages/FindJobs";
 import Coach from "./pages/Coach";
 import ProfileStrength from "./pages/ProfileStrength";
 import CareerDevelopment from "./pages/CareerDevelopment";
@@ -129,6 +130,7 @@ const App = () => {
             <Route path="/profile-strength" element={user ? <AppLayout user={user}><ProfileStrength /></AppLayout> : <Navigate to="/" />} />
             <Route path="/resumes" element={user ? <AppLayout user={user}><Resumes /></AppLayout> : <Navigate to="/" />} />
             <Route path="/jobs" element={user ? <AppLayout user={user}><Jobs /></AppLayout> : <Navigate to="/" />} />
+            <Route path="/find-jobs" element={user ? <AppLayout user={user}><FindJobs /></AppLayout> : <Navigate to="/" />} />
             <Route path="/applications" element={user ? <AppLayout user={user}><Applications /></AppLayout> : <Navigate to="/" />} />
             <Route path="/career" element={user ? <AppLayout user={user}><CareerDevelopment /></AppLayout> : <Navigate to="/" />} />
             <Route path="/events" element={<Events />} />
