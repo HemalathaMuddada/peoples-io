@@ -24,6 +24,7 @@ import {
   GitCompare,
   ArrowRightLeft,
   Mail,
+  Search,
 } from "lucide-react";
 import { toast } from "sonner";
 import {
@@ -49,6 +50,7 @@ const navigation = [
   { name: "Profile", href: "/profile", icon: User },
   { name: "Resumes", href: "/resumes", icon: FileText },
   { name: "Job Matches", href: "/jobs", icon: JobsIcon },
+  { name: "Find Jobs", href: "/find-jobs", icon: Search },
   { name: "Applications", href: "/applications", icon: Target },
   { name: "Career Development", href: "/career", icon: GraduationCap },
   { name: "Events", href: "/events", icon: Calendar },
